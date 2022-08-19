@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-md" style="background-color:mistyrose;">
+    <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" width="55" height="40" class="d-inline-block align-top" alt="">
+    </a>
+    <!--when the window size decreases, the navigation collapses and it will show an icon and it can drop down-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" id="nowMenu">
+                <!--when its trigger, it will pop up the onclick-->
+                <a class="nav-link" href="#" id="now" onClick="listProducts()" style="color:rebeccapurple;"></a>
+            </li>
+            <li class="nav-item" id="aboutMenu">
+                <!--when triggered, it will pop up the data-target-->
+                    <a class="nav-link" href="#" style="color: rebeccapurple;" id="about" data-toggle="modal" data-target="#messageModal">  
+                            About
+                    </a>
+            </li>
+        </ul>
+        
+        <input type ="text" class="form-control" id="search" placeholder="Product Name" onkeyup="searchProduct()"style="color: rebeccapurple;">
+
+        <ul class="navbar-nav">
+            <li class="nav-item" id="registerMenu">
+                    <a class="nav-link" href="#" id="register" data-toggle="modal" data-target="#registerModal"style="color: rebeccapurple;">  
+                            Register
+                    </a>
+            </li>
+            <li class="nav-item" id="loginMenu">
+                <a class="nav-link" href="#" id="login" data-toggle="modal" data-target="#loginModal"style="color: rebeccapurple;">  
+                        Login
+                </a>
+            </li>
+            <li class="nav-item" id="welcomemessage" style="color: rebeccapurple;"></li>
+            <li class="nav-item" id="editMenu" style="color:rebeccapurple; display:none;">
+                <a class="nav-link" href="edit.html" style="color:rebeccapurple;">  
+                        Profile
+                </a>
+            </li>
+            <li class="nav-item" id="logoutMenu" style="display:none">
+                <a class="nav-link" href="index.html" id="logout" onclick="logoutMe();"style="color: rebeccapurple;">  
+                        Log out
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

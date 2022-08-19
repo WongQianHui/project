@@ -1,0 +1,28 @@
+<!-- this is a structure of Bootstrap Modal -->
+<!--modal is a pop up window but its not visible unless its clicked on-->
+<div class="modal fade " id="loginModal" tabindex="-1" role="dialog">    
+	<div class="modal-dialog modal-xl " role="document">        
+		<div class="modal-content">            
+			<div class="modal-body">                
+				<form>
+					<div class="row text-left">
+						<div class="col-12">
+							<table class="table table-hover table-responsive table-sm">
+								<div class="form-group">
+									<label for="username">Username</label>
+									<input type="text" class="form-control" id="usernameLogin" aria-describedby="emailHelp"
+										placeholder="Enter username">
+								</div>
+								<div class="form-group">
+									<label for="password">Password</label>
+									<input type="password" class="form-control" id="passwordLogin" placeholder="Password">
+								</div>
+							</table>
+						</div>
+					</div>
+					<button onclick="loginMe();" type="button" class="btn btn-primary">Login</button>
+				</form>           
+			</div>        
+		</div>    
+	</div>
+</div>

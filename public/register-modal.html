@@ -1,0 +1,54 @@
+<!-- this is a structure of Bootstrap Modal -->
+<!--modal is a pop up window but its not visible unless its clicked on-->
+<div class="modal fade " id="registerModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<form>
+					<div class="row text-left">
+						<div class="col-6">
+							<div class="form-group">
+								<label for="username">Username</label>
+								<input type="text" class="form-control" id="username" aria-describedby="emailHelp"
+									placeholder="Enter username">
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="password">Password</label>
+								<input type="password" class="form-control" id="password" placeholder="Password">
+							</div>
+						</div>
+					</div>
+					<div class="row text-left">
+						<div class="col-6">
+							<div class="form-group">
+								<label for="name">Name</label>
+								<input type="text" class="form-control" id="name" placeholder="Name">
+							</div>
+						</div>
+					</div>
+					<div class="row text-left">
+						<div class="col-12">
+							<table class="table table-hover table-responsive table-sm">
+								<div class="form-group">
+									<label for="gender">Gender</label>
+									<input type="text" class="form-control" id="gender" placeholder="Gender">
+								</div>
+								<div class="form-group">
+									<label for="email_address">Email address</label>
+									<input type="email" class="form-control" id="email_address"
+										aria-describedby="emailHelp" placeholder="Enter email">
+									<small id="emailHelp" class="form-text text-muted">We'll never share your email with
+										anyone
+										else.</small>
+								</div>
+							</table>
+						</div>
+					</div>
+					<button onclick="registerMe();" type="button" class="btn btn-primary">Register</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

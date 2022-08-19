@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Product Review Website</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<!--will load this-->
+
+<body onload="getProductsData()">
+    <!-- Include top navigation here -->
+    <!--include the top navigation file to be displayed-->
+    <div w3-include-html="top-navigation.html"></div>
+    <div class="row text-left">
+        <div class="col-2">
+            <fieldset class="form">
+                <p style="font-size: 20px;">Category</p>
+                <label class="container">
+                    <form>
+                        <input type="radio" id="allproducts" name="categories" onclick="displayProducts()">
+                        <label for="allproducts">All Products</label><br>
+
+                        <input type="radio" id="ElectronicDevices" name="categories" onclick="list_ElectronicDevices()">
+                        <label for="ElectronicDevices">Electronic Devices</label><br>
+
+                        <input type="radio" id="HomeAppliances" name="categories" onclick="list_HomeAppliances()">
+                        <label for="HomeAppliances">Home Appliances</label><br>
+
+                        <input type="radio" id="HealthNBeauty" name="categories" onclick="list_HealthNBeauty()">
+                        <label for="HealthNBeauty">Health & Beauty</label>
+                        <br>
+                        <input type="radio" id="KitchenWares" name="categories" onclick="list_KitchenWares()">
+                        <label for="KitchenWares">Kitchen Wares</label>
+                        <br>
+                        <input type="radio" id="PetProducts" name="categories" onclick="list_PetProducts()">
+                        <label for="PetProducts">Pet Products</label>
+                        <br>
+                        <input type="radio" id="FurnitureNBedding" name="categories" onclick="list_FurnitureNBedding()">
+                        <label for="FurnitureNBedding">Furniture & Bedding</label>
+                        <br>
+                        <input type="radio" id="GardenNPowerTools" name="categories" onclick="list_GardenNPowerTools()">
+                        <label for="GardenNPowerTools">Garden & Power Tools</label>
+                        <br>
+                        <input type="radio" id="BabyNKidsProducts" name="categories" onclick="list_BabyNKidsProducts()">
+                        <label for="BabyNKidsProducts">Baby & Kids Products</label>
+                    </form>
+                    
+            </fieldset>
+        </div>
+
+        <!-- This is the container that holds the initial message, heading, and movies -->
+        <div class="col-10">
+            <div class="container">
+                <!-- The message will be shown when the page loads and will
+            disappear after the movies are loaded -->
+                <!--a default message-->
+                <div class="row" id="parent">
+                    Retrieving product from database... Please wait...<br><br>
+                    If you are seeing this message for a long time, it is likely
+                    that you have a JavaScript error. Troubleshoot your script by
+                    using the browser console panel now. Please use either Firefox
+                    or Chrome to render this webpage.
+                </div>
+                <p>
+                    <!-- This is the heading showing how many movies are there -->
+                <div id="productsTable" class="row"></div>
+                <div id="searchTable" class="row"></div>
+                </p>
+                <!-- Displays thumbnails of the movies here -->
+
+            </div>
+        </div>
+    </div>
+
+    <!--include all content from the html files-->
+    <!--all these html files is a pop up which isn't visible by default, will pop up when clicked on-->
+    <!-- Include the movies modal here -->
+
+    <div w3-include-html="products-modal.html"></div>
+    <!-- Include the comments modal here -->
+    <div w3-include-html="comments-modal.html"></div>
+    <!-- Include the new comments modal here -->
+    <div w3-include-html="new-comments-modal.html"></div>
+    <!-- Include the edit comments modal here -->
+    <div w3-include-html="edit-comments-modal.html"></div>
+    <!-- Include the message modal here -->
+    <div w3-include-html="message-modal.html"></div>
+
+    <div w3-include-html="register-modal.html"></div>
+    <div w3-include-html="register-success-modal.html"></div>
+    <div w3-include-html="register-fail-modal.html"></div>
+    <div w3-include-html="success-modal.html"></div>
+    <div w3-include-html="fail-modal.html"></div>
+    <div w3-include-html="login-modal.html"></div>
+    <br><br>
+    <!-- Include the footer here -->
+    <div w3-include-html="footer.html"></div>
+</body>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script>
+    //to bring in other HTML on the fly into this page
+    w3.includeHTML();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/86ec7c1143.js"></script>
+<script src="js/app.js"></script>
+<script src="js/comments.js"></script>
+<script src="js/edituser.js"></script>
+<script src="js/products.js"></script>
+<script src="js/register.js"></script>
+<script src="js/login.js"></script>
+<script src="js/categories.js"></script>
+<script src="js/checktoken.js"></script>
+<script src="js/logout.js"></script>
+
+</html>
