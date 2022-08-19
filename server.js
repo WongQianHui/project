@@ -1,4 +1,5 @@
 var express = require("express") //using express framework
+const port = 3000
 var productController = require("./controllers/productController");
 var userController = require("./controllers/userController");
 var commentController = require("./controllers/commentController");
@@ -30,6 +31,6 @@ app.route('/login').post(userController.loginUser);
 //params refer to value of id here
 //get=retrive post=insert put=update
 //when routing path is the same, the ; only appears at the end
-
-app.listen(8080,"127.0.0.1");
-console.log("web server running @ http://127.0.0.1:8080")
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+//app.listen(8080,"127.0.0.1");
+//console.log("web server running @ http://127.0.0.1:8080")
